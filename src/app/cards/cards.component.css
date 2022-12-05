@@ -1,0 +1,398 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    line-height: 1.5;
+}
+.logo{
+  color: rgb(254, 253, 253);
+}
+.navbar-custom {
+padding-top: 1rem;
+padding-bottom: 1rem;
+background: rgba(66, 55, 55, 0.5);
+}
+/*/ endd of noww    kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk */
+
+.hero{
+     padding-top: 20rem;
+     padding-bottom: 6rem;
+     text-align: center;
+     color:black;
+     background-image: url("Image/display.jpg") ;
+     animation: slideBg 8s linear infinite 0s;
+     animation-timing-function: ease-in-out;
+     background-repeat: repeat-x;
+     background-attachment: scroll;
+     background-position: center;
+     background-size: cover;
+}
+.card-wrapper{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+.product-rating{
+    color: #ffc107;
+}
+.product-rating span{
+    font-weight: 600;
+    color: #252525;
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #021323;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    color:black;
+    background: url("Image/Fundraising-Tree.jpg") left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail ul li span{
+    font-weight: 400;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+}
+.purchase-info input,
+.purchase-info .btn{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+.purchase-info input{
+    width: 60px;
+}
+.purchase-info .btn{
+    cursor: pointer;
+    color: #fff;
+}
+.purchase-info .btn:first-of-type{
+    background: #256eff;
+}
+.purchase-info .btn:last-of-type{
+    background: #f64749;
+}
+.purchase-info .btn:hover{
+    opacity: 0.9;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}
+
+/* About section*/
+  
+.about {
+    padding: 10px 0 0 0;
+  }
+  
+  .about .icon-boxes h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #080808;
+    margin-bottom: 15px;
+  }
+  
+  .about .icon-box {
+    margin-top: 40px;
+  }
+  
+  .about .icon-box .icon {
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 2px solid #cc1c05;
+    border-radius: 50px;
+    transition: 0.5s;
+  }
+  
+  .about .icon-box .icon i {
+    color: #cc1c05;
+    font-size: 32px;
+  }
+  
+  .about .icon-box:hover .icon {
+    background: #cc1c05;
+    border-color: #cc1c05
+  }
+  
+  .about .icon-box:hover .icon i {
+    color: #fff;
+  }
+  
+  .about .icon-box .title {
+    margin-left: 85px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .about .icon-box .title a {
+    color: #343a40;
+    transition: 0.3s;
+  }
+  
+  .about .icon-box .title a:hover {
+    color: #cc1c05;
+  }
+  
+  .about .icon-box .description {
+    margin-left: 85px;
+    line-height: 24px;
+    font-size: 14px;
+  }
+  /*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info {
+    padding: 20px 40px;
+    background: #f7e759;
+    color: #131313;
+    text-align: center;
+    border: 1px solid #fff;
+  }
+  
+  .contact .info i {
+    font-size: 30px;
+    color: #a31818;
+    margin-bottom: 15px;
+  }
+  
+  .contact .info h4 {
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .contact .info p {
+    font-size: 15px;
+  }
+  .rounded-cor{
+    border-radius: 50px;
+  }
+  /*Footer*/
+  .social{
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+  list-style: none;
+  }
+  .social .list-item{
+    position: relative;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+  }
+  .social .list-item:after,
+  .social .list-item:before{
+    content:"";
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, yellow);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0;
+    transition: 1s;
+  }
+  .social .list-item:after{
+    filter: blur(20px);
+  }
+  .social .list-item:hover:before,
+  .social .list-item:hover:after{
+  opacity: 1;
+  }
+  .social .list-item .list-link{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    background: #000;
+    font-size: 28px;
+    border-radius: 50%;
+    transition:2s; 
+  }
+  .social .list-item .list-link i{
+    text-shadow: 0 2px 5px rgba(0,0,0, .2);
+  
+  }
+  .social .list-item:nth-child(1) a,
+  .social .list-item:nth-child(1):before,
+  .social .list-item:nth-child(1):after{
+    background: linear-gradient(45deg, #00aeff, #a200ff);
+  }
+  .social .list-item:nth-child(2) a,
+  .social .list-item:nth-child(2):before,
+  .social .list-item:nth-child(2):after{
+    background: linear-gradient(45deg, #00a2ff, #ff1e00);
+  }
+  .social .list-item:nth-child(3) a,
+  .social .list-item:nth-child(3):before,
+  .social .list-item:nth-child(3):after{
+    background: linear-gradient(45deg,#ff008c, #ce6708);
+  }
+  .social .list-item:nth-child(4) a,
+  .social .list-item:nth-child(4):before,
+  .social .list-item:nth-child(4):after{
+    background: linear-gradient(45deg,#0791c7, #f794a5);
+  }

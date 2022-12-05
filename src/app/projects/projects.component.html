@@ -1,0 +1,139 @@
+<html lang="en">
+    <head>
+        <title>Projects</title>
+        <meta charset="utf-8" />
+        <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        -->
+
+        <!-- Bootstrap CSS -->
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+        crossorigin="anonymous"
+        />
+
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <link
+        href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+        />
+        <title>Fundraiser</title>
+        <!--link rel="stylesheet" href="home-page.component.css" /-->
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+
+
+    </head>
+    <body>
+
+
+
+
+        <div class="container">
+            <h1>More Fundraisers</h1>
+            <div class="row row-cols-3">
+              <div class="col" *ngFor="let campaigns of campaignsList">
+                <div class="page">
+                  <a >
+                    <div class="imgcover">
+                      <a routerLink="/donate-form-page/{{campaigns.id}}">
+                      <img
+                      src="{{campaigns.imageURL}}"
+                      alt="image"
+                      class="pagecvrimg"
+                      />
+                    </a>
+                    </div>
+                    <div class="page_content">
+                      <div class="titleinfo">
+                        <div class="title">{{campaigns.title}}</div>
+                        <div class="info">
+                          {{campaigns.description}}
+                        </div>
+                      </div>
+                  </div>
+                  <div>
+                    <div style="width: 80%; text-align: left; float: left">
+                      <b>${{campaigns.goal}} Goal</b>
+                    </div>
+                    <div style="text-align: right; width: 20%; float: right">
+                      
+                      <b>{{100*(campaigns.amountRaised/campaigns.goal)}}%</b>
+                    </div>
+                  </div>
+                  
+                  <div class="page_footer">
+                    <progress class="progress_bar" value="{{campaigns.amountRaised/campaigns.goal}}"></progress>
+                    <b>${{campaigns.amountRaised}} Raised</b>
+
+
+                    <button mat-icon-button style="float:right"  (click) = "updateCampaign()">
+                      <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button style="float:right" (click) = "deleteCampaign(campaigns)">
+                      <mat-icon>delete</mat-icon>
+                    </button>
+                    
+                    <br>
+                    <i style="font-size: 1so2px" class="fa"
+                    >&#xf017; {{campaigns.days}} days left</i>
+                    <a [routerLink]="['/donate-form-page',campaigns.id]" class = "btn btn-primary" style = "float:right">Read More</a>
+                  </div>
+                  
+                  
+                </a>
+                
+              </div>
+              
+            </div>
+            </div>
+          </div>
+
+
+
+          <!-- <div class="edit-form">
+                        <a [routerLink]="['/projects']">Back</a>
+                        <form #values="ngForm" (submit)="submitEdit()">
+                          <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Title </label>
+                                <input type="first_name" class="form-control" name="email" [(ngModel)]="title">
+                                <br>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Days Left</label>
+                                <input type="last_name" class="form-control" name="email" [(ngModel)]="days">
+                                <br>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Goal Amount</label>
+                                <input type="email" class="form-control" name="email" [(ngModel)]="goal">
+                                <br>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Description</label>
+                                <input type="password" class="form-control" name="password" [(ngModel)]="description">
+                                <br>
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Image URL</label>
+                                <input type="password" class="form-control" name="password" [(ngModel)]="imageURL">
+                                <br>
+                              </div>
+                            
+                        </form>    
+                          <button md-raised-button value="submit"> Save Changes </button>
+                        </form>
+                    </div> -->
+          
+    </body>
+</html>

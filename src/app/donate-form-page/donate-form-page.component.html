@@ -1,0 +1,153 @@
+
+<div *ngIf ="campaign !== undefined">
+    <div class = "row">
+        <div class = "col-12">
+            <div class = "text-center">
+                <h1>Welcome to {{campaign?.title}} page!</h1>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-12">
+            <div class = "text-center">
+                <img src="{{campaign?.imageURL}}">
+            </div>
+        </div><br>
+        <div class = "col-7">
+            <ul>
+                <li>${{campaign?.goal}} Goal Amount</li><br>
+                <li>${{campaign?.amountRaised}} Amount Raised!</li>
+                
+
+            </ul><br>
+            <div *ngIf="stripeStatus == ''" style="display: inline-block;">
+    
+                <button mat-flat-button color="primary"  id="checkout-button" (click)='checkoutFirebase(campaign.id)'>Donate Now</button>
+        </div>
+             
+        </div>
+
+        
+        
+    </div>
+    <h3>Description:</h3>
+                {{campaign?.description}}
+</div>
+
+<mat-card *ngIf="stripeStatus == 'success'" >
+    <h1>Thanks for your order!</h1>
+    <p>
+        We appreciate your Donation!
+    </p>
+</mat-card>
+
+<mat-card *ngIf="stripeStatus == 'cancel'">
+    <h1>Transaction cancelled!</h1>
+    <p>
+        Please try again.
+    </p>
+</mat-card>
+
+<button *ngIf="stripeStatus != ''" mat-raised-button color="primary" (click)="reloadHome()">
+    <mat-icon>home</mat-icon>
+    <span>Reload Home</span>
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--DOCTYPE html>
+<html lang= "en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://js.stripe.com/v3/"></script-->
+
+    <!-- Bootstrap CSS -->
+    
+    <!--title> donate me </title>
+    <link rel="stylesheet" href="donate-form-page.component.css">
+</head>
+<body>
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                    <img src = "http://localhost:4200/assets/donate logo.jpg"width = "100%" class="ProductImg"> 
+                <div class = "small-img-row">
+                    <div class="small-img-col">
+                        <img src="http://localhost:4200/assets/fundrasing logo.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="http://localhost:4200/assets/Fundraising-Tree.jpg" width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="http://localhost:4200/assets/Fundraising-Ideas.jpg"  width="100%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="http://localhost:4200/assets/donate logo.jpg" width="100%" class="small-img">
+                    </div>
+                </div>
+            </div>
+        <div class="col-2">
+            <p> Pick for Donation </p>
+            <h1> Donate here </h1>>
+            <h4> $1.00 </h4>
+            <select>
+                <option> Select Ammount </option>
+                <option> $5.00  </option>
+                <option> $15.00  </option>
+                <option> $20.00  </option>
+                <option> $50.00  </option>
+                <option> $100.00  </option>
+            </select>
+            <input type="number" value="1">
+            <div *ngIf="stripeStatus == ''" style = "display: flex;">
+
+            
+                <a class="btn" id = "checkout-button" (click) = 'checkoutFirebase(Campaigns.id)'> Donate</a>
+            </div-->
+
+            <!--href="/individual-fundrasier-page"-->
+            <!--h3> Fundrasing Details<i class = "fa fa-indent"></i>
+            </h3>
+            <br>
+            <p> With the help of you donation poor students can go to School.
+                You money will help them learn and one day they will thank you for all of this help. 
+                You donations will be very beneficial.
+            </p>
+        </div>
+        </div>
+    </div> 
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementByIdClassName("small-img");
+        SmallImg[0].onclick = function()
+        {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function()
+        {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[2].onclick = function()
+        {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[3].onclick = function()
+        {
+            ProductImg.src = SmallImg[0].src;
+        }
+
+    </script> 
+
+</body-->

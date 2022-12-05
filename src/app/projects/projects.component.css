@@ -1,0 +1,131 @@
+.pages{
+    background-color: white;
+    padding: 1rem 1rem;
+}
+.slider-wrap{
+    position: relative;
+    height: 40rem;
+}
+
+.slider-main{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.slider-main::-webkit-scrollbar{
+    display: none;
+}
+
+.page{
+    display: inline-block;
+    width: 16rem;
+    height: 31rem;
+    position: relative;
+    border-color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: .5rem .3rem;
+    white-space: normal;
+    vertical-align: top;
+}
+a{
+    color:inherit;
+    text-decoration: none;
+}
+page:hover .title{
+    color:  black;
+        text-decoration-line: underline;
+    }
+    .page:hover .info{
+        color:  black;
+            text-decoration-line: none;
+        }
+    
+    .imgcover{
+        height: 35%;
+        overflow: hidden;
+    }
+    .imgcover cover{
+        height: 100%;
+        width: 200%;
+    }
+    
+    .page_content{
+        height: 35%;
+    }
+    
+    .page_footer{
+        padding: 1%;
+        height: 15%;
+    }
+    
+    .progress_bar{
+        width: 100%;
+        height: 25%;
+    }
+    
+    .pagecvrimg{
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+    }
+    
+    .pagecvrimg:hover{
+        transform: scale(1.2);
+    }
+    
+    .titleinfo{
+        padding: 1rem;
+    }
+    
+    .title{
+        font-weight: 600;
+        text-align: center;
+    }
+    
+    .info{
+        font-size: 95%;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    
+    .text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .button {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        background-color: white;
+        border-style: outset;
+        border-width: 2px;
+        border-color: black;
+        padding: 1.3rem;
+        text-align: center;
+        position: absolute; 
+        top: 14rem;
+        border-radius: 50%;
+      }
+    
+      .button-left{
+        transform: rotate(-90deg);
+        left:11%
+      }
+    
+      .button-right{
+        transform: rotate(90deg);
+        right: 11%;
+      }

@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+.pages .owl-prev, .pages .owl-next{
+    background: rgba(158, 158, 158, 28%) !important;
+    color: #222!important;
+    height: 60px!important;
+    width: 60px!important;
+    border-radius: 50%!important;
+   
+    top: 50%;
+}
+
+.pages .owl-next{
+    right: -42;
+    transform: translate(-1070%, -500%);
+}
+
+.pages .owl-prev{
+    
+    transform: translate(1070%, -500%);
+}
+
+.pages .owl-next i{
+    font-size: 26px;
+    transform: translate(-850%, -500%);
+}
+.pages .owl-prev i{
+    font-size: 26px;
+    
+    transform: translate(840%, -500%);
+}
+
+.pages .owl-prev:hover, .pages .owl-next:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

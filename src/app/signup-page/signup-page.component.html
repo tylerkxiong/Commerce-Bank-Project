@@ -1,0 +1,46 @@
+<html>
+ <body>
+    <div class="container">
+        <div class= "row">
+           <div class="col-md-5">
+               <div class = "card">
+                    <div class="text-center"> 
+                       <h3>Welcome to Fundraiser Group</h3>
+                         <h4> Sign Up</h4>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">First Name </label>
+                          <input type="first_name" class="form-control" name="email" [(ngModel)]="first_name">
+                          <br>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                          <input type="last_name" class="form-control" name="email" [(ngModel)]="last_name">
+                          <br>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                          <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                          <br>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" name="password" [(ngModel)]="password">
+                          <br>
+                        </div>
+                        <!-- <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Retype Password</label>
+                          <input  formControlName = "repassword"  type="password" class="form-control" id="exampleInputPassword1">
+                          <br>
+                             <span class = "text-danger" *ngIf= "signupForm.controls['repassword'].dirty && signupForm.hasError('required','repassword')">* Retype Password Required</span>
+                        </div> -->
+                        <button type="submit"class="btn btn-primary" (click)="register()">Sign Up</button>
+                      </form>
+                      <a routerLink="/loginpage">Already Registered? Click to Log In</a>
+               </div>
+           </div>
+        </div>
+    </div>
+    </body>
+</html>

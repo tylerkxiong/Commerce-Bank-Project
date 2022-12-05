@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Homepage</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    -->
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fundraiser</title>
+    <link rel="stylesheet" href="home-page.component.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  
+  </head>
+  <body>
+    <!---- Navbar-->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top"
+      id="mainNav"
+    >
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="logo">Fundraiser</span>
+      </a>
+      <button
+        class="navbar-toggler navbar-toggler-right"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        Menu
+        <i class="fas fa-bars ml-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="projects">Projects</a>
+          </li>
+          <li *ngIf = "admin()" class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/employee-dashboard"
+              >User Dashboard</a
+            >
+          </li>
+          <li *ngIf = "login()" class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/create-campaign"
+              >Create Campaign</a
+            >
+          </li>
+          <li *ngIf = "!login()" class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="/loginpage">Login</a>
+          </li>
+
+          <li *ngIf = "login()" class = "nav-item">
+            <a class ="nav-link" (click) = "logout()">Logout</a>
+
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- End of the Navbar
+     Hero -->
+    <header class="hero">
+      <div class="container">
+        <br /><br /><br />
+        <div class="hero-heading text-uppercase" href="#">
+          Care for Community
+        </div>
+        <a *ngIf = "!login()" class="btn btn-danger btn-lg text-uppercase" href="/signup">
+          Sign Up
+        </a>
+      </div>
+    </header>
+
+    <!--end of Hero Image-->
+    <!-- Major Causes-->
+    <section class="mt-5 page-section" id="services">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-heading text-uppercase font-weight-bold">
+            Major Causes
+          </h2>
+          <h3 class="section-subheading text-muted">
+            Why we are looking for fundraising?
+          </h3>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-danger"></i>
+              <i class="fas fa-hand-holding-usd fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="my-3">Give Donations</h4>
+            <p class="text-muted">
+              By getting you donatione. We will help the community. Those
+              donation will be for the people who are deserving.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-warning"></i>
+              <i class="fas fa-lightbulb fa-stack-1x fa-inverse"></i>
+            </span>
+            <h4 class="my-3">Give Inspiration</h4>
+            <p class="text-muted">
+              This will give the inspiration to the local community teenagers
+              and the adults. Your donation will make our community aware of the
+              events being happening
+            </p>
+          </div>
+          <div class="col-md-4">
+            <span class="fa-stack fa-4x">
+              <i class="fas fa-circle fa-stack-2x text-success"></i>
+              <i class="fas fa-tshirt fa-stack-1x fa-inverse"></i>
+            </span>
+
+            <h4 class="my-3">Become Volunteer</h4>
+            <p class="text-muted">
+              People from all around the world can volunteer with us. They can
+              help us providing a needed aid to the local community.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--body-->
+    <section class="pages">
+      <div class="container-fluid">
+        <div class="slider-wrap">
+          <div class="slider-main">
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide>
+                <div class="page">
+                  <div class="imgcover">
+                    <img
+                      src="http://localhost:49811/assets/cure-cancer.jpeg"
+                      alt="image"
+                      class="pagecvrimg"
+                    />
+                  </div>
+                  <div class="page_content">
+                    <div class="titleinfo">
+                      <div class="title">Help Fighting Cancer</div>
+                      <div class="info">
+                        Be a part of those helping others fighting cancer.
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="width: 80%; text-align: left; float: left">
+                      <b>$1400 raised $2500</b>
+                    </div>
+                    <div style="text-align: right; width: 20%; float: right">
+                      <b>15%</b>
+                    </div>
+                  </div>
+
+                  <div class="page_footer">
+                    <progress class="progress_bar" value=".6"></progress>
+                    <i style="font-size: 12px" class="fa"
+                      >&#xf017; 25 days left
+                    </i>
+                    <a href="/donate-form-page"><button>Donate Now</button></a>
+                  </div>
+                </div>
+              </ng-template>
+
+              <ng-template carouselSlide>
+                <div class="page">
+                  <div class="imgcover">
+                    <img
+                      src="http://localhost:49811/assets/education.jpg"
+                      alt="image"
+                      class="pagecvrimg"
+                    />
+                  </div>
+                  <div class="page_content">
+                    <div class="titleinfo">
+                      <div class="title">Support Education</div>
+                      <div class="info">
+                        Help fullfiling needs of the children who can't afford
+                        getting education
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="width: 80%; text-align: left; float: left">
+                      <b>$12k raised of $20k</b>
+                    </div>
+                    <div style="text-align: right; width: 20%; float: right">
+                      <b>15%</b>
+                    </div>
+                  </div>
+                  <div class="page_footer">
+                    <progress class="progress_bar" value=".4"></progress>
+                    <i style="font-size: 12px" class="fa"
+                      >&#xf017; 20 days left</i
+                    >
+                    <a href="/donate-form-page"><button>Donate Now</button></a>
+                  </div>
+                </div>
+              </ng-template>
+
+              <ng-template carouselSlide>
+                <div class="page">
+                  <div class="imgcover">
+                    <img
+                      src="http://localhost:49811/assets/medical.jpg"
+                      alt="image"
+                      class="pagecvrimg"
+                    />
+                  </div>
+                  <div class="page_content">
+                    <div class="titleinfo">
+                      <div class="title">Medical Support</div>
+                      <div class="info">
+                        Donate for the patients who can't pay off their medical
+                        bills
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div style="width: 80%; text-align: left; float: left">
+                      <b>$600 raised of $5k</b>
+                    </div>
+                    <div style="text-align: right; width: 20%; float: right">
+                      <b>15%</b>
+                    </div>
+                  </div>
+                  <div class="page_footer">
+                    <progress class="progress_bar" value=".4"></progress>
+                    <i style="font-size: 12px" class="fa"
+                      >&#xf017; 45 days left</i
+                    ><a href="/donate-form-page"
+                      ><button>Donate Now</button>
+                    </a>
+                  </div>
+                </div>
+              </ng-template>
+
+              <ng-template carouselSlide>
+                <div class="page">
+                  <a href="/cards">
+                    <div class="imgcover">
+                      <img
+                        src="http://localhost:49811/assets/wagon.jpg"
+                        alt="image"
+                        class="pagecvrimg"
+                      />
+                    </div>
+                    <div class="page_content">
+                      <div class="titleinfo">
+                        <div class="title">Project 4</div>
+                        <div class="info">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Curabitur sodales justo tellus, sit amet
+                          porttitor augue bibendum eget. Curabitur scelerisque,
+                          justo ut dictum facilisis, tellus diam viverra leo,
+                          sit amet semper ligula justo tempor dui. Vestibulum in
+                          libero non lectus tincidunt facilisis.
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="width: 80%; text-align: left; float: left">
+                        <b>$200 raised</b>
+                      </div>
+                      <div style="text-align: right; width: 20%; float: right">
+                        <b>15%</b>
+                      </div>
+                    </div>
+                    <div class="page_footer">
+                      <progress class="progress_bar" value=".8"></progress>
+                      <i style="font-size: 12px" class="fa"
+                        >&#xf017; 25 days left</i
+                      >
+                    </div>
+                  </a>
+                </div>
+              </ng-template>
+
+              <ng-template carouselSlide>
+                <div class="page">
+                  <a href="/donate-form-page">
+                    <div class="imgcover">
+                      <img
+                        src="http://localhost:49811/assets/wagon.jpg"
+                        alt="image"
+                        class="pagecvrimg"
+                      />
+                    </div>
+                    <div class="page_content">
+                      <div class="titleinfo">
+                        <div class="title">Project 5</div>
+                        <div class="info">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Curabitur sodales justo tellus, sit amet
+                          porttitor augue bibendum eget. Curabitur scelerisque,
+                          justo ut dictum facilisis, tellus diam viverra leo,
+                          sit amet semper ligula justo tempor dui. Vestibulum in
+                          libero non lectus tincidunt facilisis.
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div style="width: 80%; text-align: left; float: left">
+                        <b>$200 raised</b>
+                      </div>
+                      <div style="text-align: right; width: 20%; float: right">
+                        <b>15%</b>
+                      </div>
+                    </div>
+                    <div class="page_footer">
+                      <progress class="progress_bar" value=".8"></progress>
+                      <i style="font-size: 1so2px" class="fa"
+                        >&#xf017; 25 days left</i
+                      >
+                    </div>
+                  </a>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/body-->
+    <!-- STart of MORE PAGES -->
+    
+    <div class="container">
+      <h1>More Fundraisers</h1>
+      <div class="row row-cols-3">
+        <div class="col" *ngFor="let campaigns of campaignsList">
+          <div class="page">
+            <a href="/donate-form-page">
+              <div class="imgcover">
+                <img
+                src="{{campaigns.imageURL}}"
+                alt="image"
+                class="pagecvrimg"
+                />
+              </div>
+              <div class="page_content">
+                <div class="titleinfo">
+                  <div class="title">{{campaigns.title}}</div>
+                  <div class="info">
+                    {{campaigns.description}}
+                  </div>
+                </div>
+            </div>
+            <div>
+              <div style="width: 80%; text-align: left; float: left">
+                <b>$0 raised</b>
+              </div>
+              <div style="text-align: right; width: 20%; float: right">
+                <b>0%</b>
+              </div>
+            </div>
+            <div class="page_footer">
+              <progress class="progress_bar" value=".8"></progress>
+              <i style="font-size: 1so2px" class="fa"
+              >&#xf017; {{campaigns.days}} days left</i
+              >
+            </div>
+          </a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+  </html>
+  

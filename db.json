@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupUsers": [
+    {
+      "firstname": "bfdbdj",
+      "lastname": "bmdsbfjd",
+      "emailid": "nswjdkuwhekud@gmail.com",
+      "passowrd": "bdwhmbejh",
+      "retypepassword": "cnwj,ne,",
+      "id": 1
+    },
+    {
+      "firstname": "nkjschksa",
+      "lastname": "njanjs",
+      "emailid": "bcshasu@gmail.com",
+      "passowrd": "dhjhwqeu",
+      "id": 2
+    },
+    {
+      "firstname": "hfgukhrkg",
+      "lastname": "jdkvj",
+      "emailid": "krutarthlad321@gmail.com",
+      "passowrd": "jbdhgjfuwe",
+      "id": 3
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
