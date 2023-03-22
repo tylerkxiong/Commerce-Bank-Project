@@ -10,25 +10,14 @@ export const environment = {
     payments_webhook_secret: "whsec_Mx55iLHanddY64thD3S2OpiWHlZtHWwi",
 
   },
-  firebase: {
-    apiKey: "AIzaSyBWJOq_Alxl-g8Nkih3ykRGdZR4bioCtcc",
-    authDomain: "donation-8f90d.firebaseapp.com",
-    projectId: "donation-8f90d",
-    storageBucket: "donation-8f90d.appspot.com",
-    messagingSenderId: "635612753662",
-    appId: "1:635612753662:web:fc4328da231c7ae5943faf"
-
-
-
-
-
-
-    /*apiKey: "AIzaSyCnBm9L6XRjcB-3lEs45rJCfSkKvXbN7Nk",
+  firebase:  {
+    apiKey: "AIzaSyCnBm9L6XRjcB-3lEs45rJCfSkKvXbN7Nk",
     authDomain: "cbfs-87659.firebaseapp.com",
+    databaseURL: "https://cbfs-87659-default-rtdb.firebaseio.com",
     projectId: "cbfs-87659",
     storageBucket: "cbfs-87659.appspot.com",
     messagingSenderId: "762205654692",
-    appId: "1:762205654692:web:41c5970c82edb59d4da031"*/
+    appId: "1:762205654692:web:41c5970c82edb59d4da031"
   },
 
   
